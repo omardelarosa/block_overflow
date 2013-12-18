@@ -3,7 +3,7 @@ require 'sinatra/activerecord'
 
 
 # database config
-require_relative 'config/database'
+require_relative 'config/environments'
 
 # models
 require_relative 'models/site'
