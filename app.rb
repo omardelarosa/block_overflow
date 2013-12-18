@@ -8,6 +8,8 @@ require_relative 'config/database'
 # models
 require_relative 'models/site'
 
+set :environment, :development
+
 get '/' do 
   
 end
