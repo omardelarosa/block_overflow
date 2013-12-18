@@ -9,7 +9,7 @@ configure :development do
     )
 end
 
-configre :production do 
+configure :production do 
   db = URI.parse(ENV['HEROKU_POSTGRESQL_OLIVE_URL'])
   #configuration info
   ActiveRecord::Base.establish_connection(
