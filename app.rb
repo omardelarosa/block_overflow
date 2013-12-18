@@ -11,7 +11,7 @@ require_relative 'models/site'
 set :environment, :development
 
 get '/' do 
-  
+  redirect '/feed'
 end
 
 get '/sites' do 
