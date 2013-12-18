@@ -1,0 +1,9 @@
+<ul class="sites">
+  <% @sites.each do |site| %>
+  <li class="site">
+    <h1><%= site.student_name %></h1>
+    <p><a href="<%= site.url %>">link</a></p>
+    <p><%= site.description %></p>
+  </li>
+  <% end %>
+</ul>
