@@ -27,11 +27,11 @@ get '/feed' do
     url = site.url
     doc = HTTParty.get(url)
     doc_noko = Nokogiri::HTML(doc)
-    text = doc_noko.css('.post')[0].text
+    html = doc_noko.css('.block_overflow')[0].to_html
     site_hash = {
       url: url,
       student_name: site.student_name,
-      text: text,
+      text: html,
     }
     @posts << site_hash
     # @posts << site.url
