@@ -1,8 +1,8 @@
-<ul class="posts">
+<ul class="feed">
   <% @posts.each do |post| %>
-  <li class="post">
-    <p><%= post[:text] %></p>
-    <p>by <a href="<%= post[:url] %>"><%= post[:student_name] %></a></p>
-  </li>
+  <li class="feed_item med_width">
+  <p class="html_text"><%= post[:text] %></p>
+  <p class="credit med_width">via <a href="<%= post[:url] %>"><%= post[:student_name] %></a></p>
   <% end %>
+  </li>
 </ul>
