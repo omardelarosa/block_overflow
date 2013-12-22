@@ -17,13 +17,22 @@ body {
 
 div, nav, li, p, form, h1, h2 {
   padding: 5px;
-  margin: 5px;
+}
+
+html {
+  padding: 0;
+  margin: 0;
 }
 
 #main_container {
   margin: 0;
   padding: 0;
   width: 600px;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
 }
 
 #main_heading {
