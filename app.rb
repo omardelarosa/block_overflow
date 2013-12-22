@@ -1,14 +1,14 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 
+# models
+require_relative 'models/site'
+
+set :environment, ENV['RACK_ENV'].to_sym
 
 # database config
 require_relative 'config/environments'
 
-# models
-require_relative 'models/site'
-
-set :environment, :development
 
 get '/' do 
   redirect '/feed'
@@ -21,26 +21,6 @@ end
 
 get '/feed' do 
   @sites = Site.all
-  @posts = []
-
-  @sites.each do |site|
-    url = site.url
-    doc = HTTParty.get(url)
-    doc_noko = Nokogiri::HTML(doc)
-    text = doc_noko.css('.block_overflow')[0]
-    if text
-      html = text.to_html
-    else
-      html = ""
-    end
-    site_hash = {
-      url: url,
-      student_name: site.student_name,
-      text: html,
-    }
-    @posts << site_hash
-    # @posts << site.url
-  end
   erb :feed
 end
 

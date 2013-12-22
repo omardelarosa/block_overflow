@@ -12,10 +12,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Helvetica;
+  color: white;
 }
 
-div, nav, li, p {
+div, nav, li, p, form, h1, h2 {
   padding: 5px;
+  margin: 5px;
 }
 
 #main_container {
@@ -29,6 +31,18 @@ div, nav, li, p {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
+}
+
+#page_heading {
+  color: white;
+  padding-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.new_site_form_input {
+  display: block;
+  margin: 10px;
 }
 
 nav {
@@ -49,17 +63,23 @@ nav {
   
 }
 
+.site_student_name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .block_overflow {
   background-color: #0A7B83;
-  margin: 0;
+  margin: 5px;
 }
 
 .credit {
   background-color: #0A7B83;
-  margin: 0 0 20px 0;
+  margin: 0 5px 20px 15px;
   font-weight: bold;
 }
 
 .code {
   background-color: white;
+  color: black;
 }
