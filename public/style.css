@@ -36,11 +36,13 @@ html {
 }
 
 .instructions {
+  padding: 10px;
   font-style: italic;
 }
 
 .instruction {
   font-style: italic;
+  padding-left: 20px;
 }
 
 
