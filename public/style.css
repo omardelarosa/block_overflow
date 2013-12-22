@@ -35,6 +35,15 @@ html {
   font-style: italic;
 }
 
+.instructions {
+  font-style: italic;
+}
+
+.instruction {
+  font-style: italic;
+}
+
+
 #main_heading {
   color: white;
   font-size: 50px;
