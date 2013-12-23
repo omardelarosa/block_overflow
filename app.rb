@@ -25,19 +25,19 @@ get '/feed' do
 end
 
 get '/sites/new' do 
-  @site = Site.new
-  erb :new
+  # @site = Site.new
+  erb :instructions
 end
 
 post '/sites/create' do 
-  student_name = params[:student_name]
-  url = params[:url]
-  description = params[:description]
+  # student_name = params[:student_name]
+  # url = params[:url]
+  # description = params[:description]
 
-  Site.create(
-    student_name: student_name,
-    url: url,
-    description: description
-    )
+  # Site.create(
+  #   student_name: student_name,
+  #   url: url,
+  #   description: description
+  #   )
   redirect "/sites"
 end
