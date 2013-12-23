@@ -69,6 +69,9 @@ $(function(){
 
     //sort by latest;
     date_sort();
+
+    //hide any empty posts from the feed
+    hide_empty_posts();
   })
 
   // disable links of aggregated pages
