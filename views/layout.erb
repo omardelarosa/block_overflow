@@ -4,6 +4,8 @@
   <title>Block Overflow</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/js/handlebars.js"></script>
+  <script src="/js/underscore-min.js"></script>
   <script src="/js/scripts.js"></script>
 </head>
 <body>
@@ -17,5 +19,9 @@
     </nav>
     <%= yield %>
   </div>
+<script type="text/x-handlebars-template" id="post-credit-template">
+    <p class="credit med_width">via <a href="{{ url }}">{{ student_name }}</a>
+    </p>
+</script>
 </body>
 </html>

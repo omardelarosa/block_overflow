@@ -59,6 +59,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   httparty
+  json
   nokogiri
   pg
   pry

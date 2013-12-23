@@ -95,8 +95,9 @@ nav {
 
 .credit {
   background-color: #0A7B83;
-  margin: 0 5px 20px 15px;
+  margin: 10px 5px 10px 15px;
   font-weight: bold;
+  width: 200px;
 }
 
 .code {

@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'json'
 
 # models
 require_relative 'models/site'
@@ -27,6 +28,11 @@ end
 get '/sites/new' do 
   # @site = Site.new
   erb :instructions
+end
+
+get '/sites/json' do
+  @sites = Site.all
+  @sites_json = @sites.to_json
 end
 
 post '/sites/create' do 

@@ -1,8 +1,2 @@
-<ul class="feed">
-  <% @sites.each do |site| %>
-  <li class="feed_item med_width">
-  <p class="html_text"><%= site.latest_post %></p>
-  <p class="credit med_width">via <a href="<%= site.url %>"><%= site.student_name %></a></p>
-  <% end %>
-  </li>
+<ul id="feed" class="feed">
 </ul>
