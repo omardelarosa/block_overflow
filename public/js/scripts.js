@@ -4,7 +4,7 @@ function hide_empty_posts(){
   _.each( $('.feed_item'), function(item){  
     var $item = $(item);
     if ( !$item.hasClass('block_overflow') ) {
-      $item.hide(500);
+      $item.hide();
     } 
   });
 }
