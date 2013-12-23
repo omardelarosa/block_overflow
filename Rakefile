@@ -17,8 +17,22 @@ namespace :sites do
       doc = HTTParty.get(url)
       doc_noko = Nokogiri::HTML(doc)
       text = doc_noko.css('.block_overflow')[0]
+
+      def check_posts_route(site)
+        # also check "/posts" path
+        url = site.url+"/posts"
+        doc = HTTParty.get(url)
+        doc_noko = Nokogiri::HTML(doc)
+        text = doc_noko.css('.block_overflow')[0]
+        return text
+      end
+
+      text_alt = check_posts_route(site)
+
       if text
         html = text.to_html
+      elsif !text and text_alt
+        html = text_alt.to_html
       else
         html = "<p>No block_overflow posts found.</p>"
       end

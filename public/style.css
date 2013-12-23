@@ -91,6 +91,7 @@ nav {
 .block_overflow {
   background-color: #0A7B83;
   margin: 5px;
+  overflow-x: scroll;
 }
 
 .credit {
